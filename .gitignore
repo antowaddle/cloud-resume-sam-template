@@ -242,4 +242,4 @@ $RECYCLE.BIN/
 */build/*
 
 # Terraform Exe 
-.terraform\.terraform\providers\registry.terraform.io\hashicorp\aws\5.57.0\windows_amd64\terraform-provider-aws_v5.57.0_x5.exe
+.terraform/
