@@ -245,7 +245,7 @@ $RECYCLE.BIN/
 .terraform/
 
 # Get-filter-repo
-.get-filter-repo/
+get-filter-repo/
 
 # Get-filter-repo
-.get-secrets/
+get-secrets/
