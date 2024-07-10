@@ -59,14 +59,11 @@ jobs:
         run: |
             pwd 
             ls -l
-            cd cloud-resume-sam-template  
-            pwd  
-            ls -l  
   
       - name: Run sam.cmd build
         run: |
-            ./sam.cmd build
+            ./sam build
   
       - name: Deploy with sam.cmd
         run: |
-            ./sam.cmd deploy --no-confirm-changeset --no-fail-on-empty-changeset 
+            ./sam deploy --no-confirm-changeset --no-fail-on-empty-changeset 
