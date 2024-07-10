@@ -59,6 +59,7 @@ jobs:
         run: |
             ls -als
             cd .aws-sam/
+            ls -als
             sam build
   
       - name: Deploy with sam.cmd

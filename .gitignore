@@ -118,6 +118,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+build/
 develop-eggs/
 dist/
 downloads/
@@ -235,15 +236,12 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Terraform Exe 
-.terraform/
+# Build folder
+
+*/build/*
 
 # Get-filter-repo
-.get-filter-repo/
+cloud-resume-sam-template/git-secrets/
 
-# Get-filter-repo
-.get-secrets
-
-cloud-resume-sam-template\.git-secrets\
-
-cloud-resume-sam-template\terraform\
+.aws-sam
+aws-sam/build
