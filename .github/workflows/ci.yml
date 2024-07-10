@@ -54,11 +54,14 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-1
-  
+    
       - name: Run sam.cmd build
         run: |
-            cd .aws-sam/build/
-            sam build
+            ls -als
+            cd ./aws-sam
+            ls -als
+             cd ./aws-sam/build/
+            sam.cmd build
   
       - name: Deploy with sam.cmd
         run: |
