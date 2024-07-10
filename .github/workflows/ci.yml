@@ -57,5 +57,4 @@ jobs:
     
       - name: Run sam.cmd build
         run: |
-            cd .aws-sam/ echo "You're in"
             sam build
