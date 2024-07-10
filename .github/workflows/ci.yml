@@ -23,9 +23,6 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Change directory
-      run: cd cloud-resume-sam-template
-
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -34,5 +31,4 @@ jobs:
 
     - name: Run tests
       run: |
-        cd ..  # Navigate back to the main repository directory
         pytest cloud-resume-sam-template/tests/unit/test_lambda_functions.py
