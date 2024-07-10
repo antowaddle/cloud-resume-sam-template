@@ -62,8 +62,9 @@ jobs:
   
       - name: Run sam.cmd build
         run: |
-            ./sam build
+            cd .aws-sam/
+            sam build
   
       - name: Deploy with sam.cmd
         run: |
-            ./sam deploy --no-confirm-changeset --no-fail-on-empty-changeset 
+            sam.cmd deploy --no-confirm-changeset --no-fail-on-empty-changeset 
