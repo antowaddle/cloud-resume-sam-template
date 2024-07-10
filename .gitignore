@@ -118,7 +118,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -235,10 +234,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-# Build folder
-
-*/build/*
 
 # Terraform Exe 
 .terraform/
