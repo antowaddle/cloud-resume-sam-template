@@ -30,4 +30,4 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest cloud-resume-sam-template\tests\unit\test_lambda_functions.py
+        pytest tests/unit/test_lambda_functions.py
