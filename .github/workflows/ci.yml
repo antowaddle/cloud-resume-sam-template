@@ -57,11 +57,6 @@ jobs:
     
       - name: Run sam.cmd build
         run: |
-            ls -als
-            cd .aws-sam/
+            cd .aws-sam/ echo "AWS_ACCESS_KEY_ID"
             ls -als
             sam build
-  
-      - name: Deploy with sam.cmd
-        run: |
-            sam deploy --no-confirm-changeset --no-fail-on-empty-changeset 
