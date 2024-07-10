@@ -1,3 +1,11 @@
+/cloud-resume-sam-template/__pycache__
+/cloud-resume-sam-template/git-secrets
+/cloud-resume-sam-template/.pytest_cache
+/cloud-resume-sam-template/events
+/cloud-resume-sam-template/git-filter-repo
+/cloud-resume-sam-template/venv
+/cloud-resume-sam-template/__init__.py
+
 
 # Created by https://www.gitignore.io/api/osx,linux,python,windows,pycharm,visualstudiocode
 
@@ -248,4 +256,6 @@ $RECYCLE.BIN/
 get-filter-repo/
 
 # Get-filter-repo
-get-secrets/
+.get-secrets/
+
+cloud-resume-sam-template\.git-secrets\
