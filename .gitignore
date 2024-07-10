@@ -243,5 +243,4 @@ $RECYCLE.BIN/
 # Get-filter-repo
 cloud-resume-sam-template/git-secrets/
 
-.aws-sam
-aws-sam/build
+.aws-sam/
