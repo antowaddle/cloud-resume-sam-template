@@ -17,6 +17,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      path: cloud-resume-sam-template 
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -30,5 +31,6 @@ jobs:
         pip install -e .
 
     - name: Run tests
+      working-directory: cloud-resume-sam-template
       run: |
         pytest tests/unit/test_lambda_functions.py
