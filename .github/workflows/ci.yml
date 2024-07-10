@@ -54,13 +54,19 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-1
-
+    
+      - name: Navigate to cloud-resume-sam-template directory
+        run: |
+            pwd 
+            ls -l
+            cd cloud-resume-sam-template  
+            pwd  
+            ls -l  
+  
       - name: Run sam.cmd build
         run: |
-            cd cloud-resume-sam-template 
-            pwd  
-            ls -l 
-            sam.cmd build 
-        
-      - run: sam.cmd deploy --no-confirm-changeset --no-fail-on-empty-changeset
-        working-directory: cloud-resume-sam-template
+            ./sam.cmd build
+  
+      - name: Deploy with sam.cmd
+        run: |
+            ./sam.cmd deploy --no-confirm-changeset --no-fail-on-empty-changeset 
