@@ -56,5 +56,7 @@ jobs:
           aws-region: eu-west-1
 
       - run: sam.cmd build
+        working-directory: cloud-resume-sam-template\template.yaml
+        
       - run: sam.cmd deploy --no-confirm-changeset --no-fail-on-empty-changeset
-
+        working-directory: cloud-resume-sam-template
