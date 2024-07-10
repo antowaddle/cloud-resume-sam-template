@@ -57,6 +57,5 @@ jobs:
     
       - name: Run sam.cmd build
         run: |
-            cd .aws-sam/ echo "AWS_ACCESS_KEY_ID"
-            ls -als
+            cd .aws-sam/ echo "You're in"
             sam build
