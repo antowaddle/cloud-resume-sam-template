@@ -76,3 +76,13 @@ jobs:
       - name: Run sam build
         run: |
           sam build
+
+   
+      - name: Run sam deploy
+        run: |
+          sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
+      
+      
+      
+      
+      
