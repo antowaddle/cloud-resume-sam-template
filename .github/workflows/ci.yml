@@ -107,5 +107,5 @@ jobs:
         env:
             AWS_S3_BUCKET: 's3://recreated-website2351'
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             SOURCE_DIR: resume-site
