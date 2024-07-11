@@ -8,7 +8,7 @@ scenarios('../features/ui_tests.feature')
 @pytest.fixture(scope='module')
 def browser():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         yield browser
         browser.close()
 
