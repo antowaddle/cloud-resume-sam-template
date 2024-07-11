@@ -82,6 +82,21 @@ jobs:
         run: |
           sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
       
+  deploy-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --delete
+        env:
+          aws_s3_bucket: recreated-website2351
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          source_dir: resume-site
       
       
       
