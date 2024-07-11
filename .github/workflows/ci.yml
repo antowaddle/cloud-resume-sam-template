@@ -75,7 +75,7 @@ jobs:
 
       - name: Debug AWS credentials
         run: |
-          env | grep AWS
+          env | grep AWS || true
 
       - name: Run sam build
         run: |
@@ -97,7 +97,7 @@ jobs:
         run: |
           echo "AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}"
           echo "AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-          env | grep AWS
+          env | grep AWS || true
 
       - name: Setup S3
         uses: jakejarvis/s3-sync-action@master
