@@ -46,7 +46,7 @@ jobs:
           echo "aws_secret_access_key = ${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> ~/.aws/credentials
           echo "[default]" > ~/.aws/config
           echo "region = eu-west-1" >> ~/.aws/config
-
+      
       - name: Sync resume-site to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
