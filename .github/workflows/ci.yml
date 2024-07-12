@@ -85,9 +85,8 @@ jobs:
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
           args: --acl public-read --follow-symlinks --delete
-          source_dir: 'resume-site'
-          destination_bucket: 'recreated-website2351'
         env:
+          SOURCE_DIR: 'resume-site'
           AWS_S3_BUCKET: 'recreated-website2351'
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
