@@ -82,12 +82,17 @@ jobs:
           sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
 
       - name: Sync resume-site to S3
-        run: |
-          aws s3 sync ./resume-site s3://recreated-website2351
+        uses: jakejarvis/s3-sync-action@v0.5.1
+        with:
+          args: --acl public-read --follow-symlinks --delete
+          source_dir: 'resume-site'
+          destination_bucket: 'recreated-website2351'
         env:
+          AWS_S3_BUCKET: 'recreated-website2351'
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: eu-west-1
+          AWS_REGION: 'eu-west-1'
+          SOURCE_DIR: 'resume-site'
 
   playwright-tests:
     needs: build-and-deploy-infra
