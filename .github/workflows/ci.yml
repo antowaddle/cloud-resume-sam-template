@@ -99,7 +99,7 @@ jobs:
           access_key: ${{ secrets.AWS_ACCESS_KEY }}
           secret_access_key: ${{ secrets.SECRET_ACCESS_KEY }}
           region: 'eu-west-1'
-          source: 'build'
+          source: 'resume-site'
           destination_bucket: 'recreated-website2351'
           delete: true
 
