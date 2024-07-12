@@ -93,21 +93,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Debug environment variables
-        run: |
-          echo "AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}"
-          echo "AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}"
-          echo "AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-          env | grep AWS || true
-
-      - name: Print env for debugging
-        run: printenv
-
-      - name: Setup S3
-        uses: jakejarvis/s3-sync-action@master
+      - name: Sync to S3
+        uses: github-action/s3-sync-action@v1.0.0
         with:
-          args: --delete
-          aws-s3-bucket: ${{ secrets.AWS_S3_BUCKET }}
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          source_dir: resume-site
+          source_dir: 'resume-site'
+          destination_bucket: ${{ secrets.AWS_S3_BUCKET }}
+          delete: true
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
