@@ -93,7 +93,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: AWS S3 Sync Github Action
+      - name: AWS S3 Sync Github Action2
         uses: sai-sharan/aws-s3-sync-action@v0.1.0
         with:
           access_key: ${{ secrets.AWS_ACCESS_KEY }}
