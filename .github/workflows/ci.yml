@@ -93,13 +93,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Sync to S3
-        uses: github-action/s3-sync-action@v1.0.0
+      - name: AWS S3 Sync Github Action
+        uses: sai-sharan/aws-s3-sync-action@v0.1.0
         with:
-          source_dir: 'resume-site'
-          destination_bucket: ${{ secrets.AWS_S3_BUCKET }}
+          access_key: ${{ secrets.AWS_ACCESS_KEY }}
+          secret_access_key: ${{ secrets.SECRET_ACCESS_KEY }}
+          region: 'eu-west-1'
+          source: 'build'
+          destination_bucket: 'recreated-website2351'
           delete: true
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
