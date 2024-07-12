@@ -13,7 +13,7 @@ deploy-site:
 	aws-vault exec insertuser --no-session -- aws s3 sync ./resume-site s3://recreated-website2351
 
 invoke-put:
-	sam.cmd build && aws-vault exec anthonydev --no-session -- sam local invoke PutFunction
+	sam.cmd build && aws-vault exec insertuser --no-session -- sam local invoke PutFunction
 
 invoke-get:
-	sam.cmd build && aws-vault exec anthonydev --no-session -- sam local invoke GetFunction
+	sam.cmd build && aws-vault exec insertuser --no-session -- sam local invoke GetFunction
