@@ -35,6 +35,9 @@ jobs:
       - name: Run sam deploy
         run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
 
+      - name: Debug Environment Variables
+        run: env | grep AWS
+
       - name: Sync resume-site to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
