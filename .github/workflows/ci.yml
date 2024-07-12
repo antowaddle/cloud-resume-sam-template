@@ -100,13 +100,14 @@ jobs:
           echo "AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
           env | grep AWS || true
 
+      - name: Print env for debugging
+        run: printenv
+
       - name: Setup S3
         uses: jakejarvis/s3-sync-action@master
         with:
-            args: --delete
-        env:
-          AWS_S3_BUCKET: ${{secrets.AWS_S3_BUCKET}}
-          AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
-          AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-          region: 'eu-west-1'
-          SOURCE_DIR: 'resume-site'
+          args: --delete
+          aws-s3-bucket: ${{ secrets.AWS_S3_BUCKET }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          source_dir: resume-site
