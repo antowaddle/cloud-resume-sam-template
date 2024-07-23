@@ -252,3 +252,5 @@ $RECYCLE.BIN/
 cloud-resume-sam-template\.git-secrets\
 
 cloud-resume-sam-template\terraform\
+
+.terraform/terraform.tfstate
