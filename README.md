@@ -2,7 +2,8 @@
 
 This is my attempt at the Cloud Resume Challenge https://cloudresumechallenge.dev/docs/the-challenge/aws/ 
 
-This repository contains a serverless application built on AWS using Lambda functions, DynamoDB, and integrated with a CI/CD pipeline. It also includes Playwright for end-to-end testing and unit tests for Lambda functions.
+
+This repository contains a serverless application built on AWS using Lambda functions, DynamoDB, and integrated with a CI/CD pipeline. It also includes Playwright for end-to-end testing and unit tests for Lambda functions. Read my Blog Post for further insight https://dev.to/anthony_coughlin_f0ae1698/my-cloud-resume-challenge-j4p
 
 ## Live Site
 https://anthony-coughlin-resume.com/
